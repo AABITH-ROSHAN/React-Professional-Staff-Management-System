@@ -6,6 +6,7 @@ const exhbs=require('express-handlebars');
 const dbo=require('./db');
 const staffModel=require('./model/staffSchema')
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 dbo.getDatabase();
 
